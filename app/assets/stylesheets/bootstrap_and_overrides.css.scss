@@ -41,21 +41,33 @@
 
 // NAVBAR
 
+.navbar-inner {
+  min-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: orange;
+  opacity: 0.6;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .navbar .brand {
-  color: black;
+  color: white;
   display: block;
   float: left;
   font-size: 20px;
   font-weight: 600;
-  letter-spacing: -.05em;
+  letter-spacing: -.04em;
   margin-left: -20px;
-  opacity: 0.6;
+  // opacity: 0.8;
   padding: 10px 20px 10px;
   text-shadow: none;
 }
 
 a.nav {
-  color: black;
+  color: white;
   padding-top: 12px;
-  opacity: 0.6;
+  // opacity: 0.6;
 }
