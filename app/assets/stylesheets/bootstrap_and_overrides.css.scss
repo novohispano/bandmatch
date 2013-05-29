@@ -4,7 +4,7 @@
 
 .container-home {
   background: url(/assets/concert.jpg) repeat center center;
-  min-height: 600px;
+  min-height: 650px;
   min-width: 100%;
   margin-top: -20px;
 }
@@ -37,6 +37,11 @@
   border-radius: 6px;
   width: 20%;
   opacity: 0.9;
+}
+
+.footer-home {
+  margin-top: 37px;
+  text-align: center;
 }
 
 // NAVBAR
