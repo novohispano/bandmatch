@@ -5,6 +5,7 @@ gem 'pg'
 gem 'rspec-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass'
+gem 'omniauth-facebook'
 
 group :test do
 end
