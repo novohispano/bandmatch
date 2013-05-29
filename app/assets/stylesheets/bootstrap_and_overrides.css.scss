@@ -1,1 +1,61 @@
 @import "bootstrap";
+
+// HOME
+
+.container-home {
+  background: url(/assets/concert.jpg) repeat center center;
+  min-height: 600px;
+  min-width: 100%;
+  margin-top: -20px;
+}
+
+.title-home {
+  color: white;
+  font-size: 600%;
+  letter-spacing: -.05em;
+  margin-top: 250px;
+  opacity: 0.9;
+  padding-bottom: .2em;
+  text-align: center;
+}
+
+.subtitle-home {
+  color: black;
+  font-size: 200%;
+  margin-top: 1%;
+  opacity: 0.6;
+  padding-bottom: .2em;
+  text-align: center;
+}
+
+.btn-home {
+  margin-left: 45%;
+  padding: 1.5% 2%;
+  font-size: 1.5em;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  width: 20%;
+  opacity: 0.9;
+}
+
+// NAVBAR
+
+.navbar .brand {
+  color: black;
+  display: block;
+  float: left;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.05em;
+  margin-left: -20px;
+  opacity: 0.6;
+  padding: 10px 20px 10px;
+  text-shadow: none;
+}
+
+a.nav {
+  color: black;
+  padding-top: 12px;
+  opacity: 0.6;
+}

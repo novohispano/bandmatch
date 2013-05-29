@@ -8,6 +8,12 @@ gem 'bootstrap-sass'
 gem 'omniauth-facebook'
 
 group :test do
+  #pending
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :assets do

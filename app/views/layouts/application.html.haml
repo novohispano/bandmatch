@@ -6,13 +6,14 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    .navbar.navbar-top
+      .navbar-inner
+        .container
+          %a.brand BandMatch.
+          .nav-collapse.collapse
+            %ul.nav.pull-right
+              - if current_user
+                = link_to "Sign out", signout_path, class: "nav"
+              - else
+                = link_to "Sign in with Facebook", "/auth/facebook", class: "nav"
     = yield
-
-  #user_nav
-  - if current_user
-    Signed in as
-    = succeed "!" do
-      %strong= current_user.name
-    = link_to "Sign out", signout_path, id: "sign_out"
-  - else
-    = link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in"
