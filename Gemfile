@@ -9,6 +9,7 @@ gem 'omniauth-facebook'
 gem 'songkickr'
 gem 'httparty'
 gem "koala"
+gem "geocoder"
 
 group :test do
   gem 'simplecov'

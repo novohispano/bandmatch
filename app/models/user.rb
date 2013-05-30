@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
                   :image,
                   :city,
                   :state,
+                  :location,
                   :oauth_expires_at,
                   :oauth_token,
                   :provider,
@@ -16,6 +17,7 @@ class User < ActiveRecord::Base
       user.image            = auth.info.image
       user.city             = auth.info.location.split(", ")[0]
       user.state            = auth.info.location.split(", ")[1]
+      user.location         = auth.info.location
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.oauth_token      = auth.credentials.token
       user.provider         = auth.provider

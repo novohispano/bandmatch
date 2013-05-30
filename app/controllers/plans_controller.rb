@@ -1,6 +1,8 @@
 class PlansController < ApplicationController
   def index
     @plans = Plan.all
+    @coordinates = GeocoderService.location_to_coordinates(current_user.location)
+    @concerts    = SongkickService.fetch_events(@coordinates)
   end
 
   def new
