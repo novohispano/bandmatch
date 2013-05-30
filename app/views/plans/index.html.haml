@@ -1,18 +1,2 @@
-- @concerts.each_with_index do |concert, index|
-  .container.container-feed
-    %h4= concert.start
-    %h2.title-feed= concert.display_name
-    %h4= concert.performances.collect { |performance| performance.artist.display_name }
-    %h5= concert.venue.display_name
-    / Button to trigger modal
-    %a.btn.btn-warning{"data-toggle" => "modal", :href => "#myModal#{index}", :role => "button"} Join Concert
-    / Modal
-    .modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1", :id => "myModal#{index}"}
-      .modal-body
-        %h3 You are about to join the following concert.
-        %p= concert.display_name
-      .modal-footer
-        %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancel
-        %button.btn.btn-warning Confirm
-:javascript
-$('#myModal').modal(options)
+- @plans.each do |plan|
+  %h4=plan.display_name

@@ -1,18 +1,14 @@
 class PlansController < ApplicationController
   def index
     @plans = Plan.all
-    @coordinates = GeocoderService.location_to_coordinates(current_user.location)
-    @concerts    = SongkickService.fetch_events(@coordinates)
-  end
-
-  def new
-    @plan = Plan.new
   end
 
   def create
-    plan = Plan.find(params[:id])
-    plan.title       = params[:title]
-    plan.description = params[:description]
+    plan = Plan.new
+    plan.start        = DateTime.parse(params[:start])
+    plan.display_name = params[:display_name]
+    plan.description  = params[:description]
+    plan.motivation   = params[:motivation]
 
     if plan.save
       flash[:notice] = 'Your plan was successfully created.'
