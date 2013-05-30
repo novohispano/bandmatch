@@ -1,5 +1,5 @@
-class SongKickService
+class SongkickService
   def self.prepare
-    Songkickr::Remote.new(SONGKICK_API_KEY)
+    Songkickr::Remote.new(ENV['SONGKICK_API_KEY'])
   end
 end
