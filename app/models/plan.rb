@@ -1,4 +1,4 @@
-class Plans < ActiveRecord::Base
+class Plan < ActiveRecord::Base
   attr_accessible :title,
                   :description
 end

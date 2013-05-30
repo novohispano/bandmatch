@@ -6,9 +6,11 @@ gem 'rspec-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'omniauth-facebook'
+gem 'songkickr'
+gem 'httparty'
 
 group :test do
-  #pending
+  gem 'simplecov'
 end
 
 group :development do
