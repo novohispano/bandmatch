@@ -1,3 +1,5 @@
+.container.location-feed
+  %h4= "Concerts near #{current_user.location}"
 - @concerts.each_with_index do |concert, index|
   .container.container-feed
     %h4= concert.start

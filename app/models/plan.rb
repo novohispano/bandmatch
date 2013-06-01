@@ -8,4 +8,8 @@ class Plan < ActiveRecord::Base
 
   has_many :user_plans
   has_many :users, through: :user_plans
+
+  def location_in_words
+    GeocoderService.coordinates_to_location(self.location)
+  end
 end

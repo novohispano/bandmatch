@@ -21,7 +21,7 @@
               %ul.nav
                 = link_to "All Concerts", concerts_path, class: "nav"
               %ul.nav.pull-right
-                = link_to "Sign out", signout_path, class: "nav"
+                = link_to "Signed in as #{current_user.name}, Sign out", signout_path, class: "nav"
             - else
               %ul.nav.pull-right
                 = link_to "Sign in with Facebook", "/auth/facebook", class: "nav"

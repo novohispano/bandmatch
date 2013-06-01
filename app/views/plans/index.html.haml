@@ -1,2 +1,6 @@
 - @plans.each do |plan|
-  %h4=plan.display_name
+  .container.container-feed
+    %h4= plan.start
+    %h2.title-feed= plan.display_name
+    %h4= "Plan: #{plan.description}"
+    %h5= plan.location_in_words
