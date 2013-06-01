@@ -22,15 +22,6 @@ ActiveRecord::Schema.define(:version => 20130601165712) do
     t.string   "location"
   end
 
-  create_table "tweets", :force => true do |t|
-    t.string   "username"
-    t.string   "message"
-    t.string   "location"
-    t.datetime "published"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "user_plans", :force => true do |t|
     t.integer  "user_id"
     t.integer  "plan_id"

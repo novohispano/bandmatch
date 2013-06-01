@@ -1,4 +1,6 @@
 class PlansController < ApplicationController
+  before_filter :require_login
+
   def index
     @plans = Plan.all
   end
