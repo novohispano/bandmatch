@@ -1,6 +1,5 @@
 class ConcertsController < ApplicationController
   def index
-    @coordinates = GeocoderService.location_to_coordinates(current_user.location)
-    @concerts    = SongkickService.fetch_events(@coordinates)
+    @concerts = SongkickService.fetch_events(current_user.coordinates)
   end
 end

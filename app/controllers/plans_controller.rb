@@ -5,6 +5,14 @@ class PlansController < ApplicationController
 
   def user_plans
     @plans = current_user.plans
+
+    render :index
+  end
+
+  def near_plans
+    @plans = Plan.where(location: current_user.coordinates)
+
+    render :index
   end
 
   def create
@@ -12,7 +20,7 @@ class PlansController < ApplicationController
       start:        DateTime.parse(params[:start]),
       display_name: params[:display_name],
       description:  params[:description],
-      motivation:   params[:motivation]
+      location:     current_user.coordinates
       )
 
     if plan.save

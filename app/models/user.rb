@@ -29,6 +29,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def coordinates
+    GeocoderService.location_to_coordinates(self.location)
+  end
+
   def facebook
     @facebook ||= Koala::Facebook::API.new(oauth_token)
   end

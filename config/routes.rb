@@ -5,6 +5,7 @@ Bandmatch::Application.routes.draw do
 
   resources :plans
   match 'user_plans', to: 'plans#user_plans'
+  match 'near_plans', to: 'plans#near_plans'
 
   resources :concerts, only: [:index]
 
