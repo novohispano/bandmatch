@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
                   :provider,
                   :uid
 
+  has_many :user_plans
+  has_many :plans, through: :user_plans
+
   def self.from_omniauth(auth)
     User.where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.name             = auth.info.name

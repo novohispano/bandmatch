@@ -11,9 +11,18 @@
         .container
           %a.brand BandMatch.
           .nav-collapse.collapse
-            %ul.nav.pull-right
-              - if current_user
+            - if current_user
+              %ul.nav
+                = link_to "My Plans", user_plans_path, class: "nav"
+              %ul.nav
+                = link_to "All Plans", plans_path, class: "nav"
+              %ul.nav
+                = link_to "All Concerts", concerts_path, class: "nav"
+              %ul.nav.pull-right
                 = link_to "Sign out", signout_path, class: "nav"
-              - else
-                = link_to "Sign in with Facebook", "/auth/facebook", class: "nav"
+            - else
+              %ul.nav.pull-right
+              = link_to "Sign in with Facebook", "/auth/facebook", class: "nav"
+    - if flash.notice
+      .alert= flash.notice
     = yield

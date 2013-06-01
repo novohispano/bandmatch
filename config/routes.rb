@@ -4,6 +4,8 @@ Bandmatch::Application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
   resources :plans
+  match 'user_plans', to: 'plans#user_plans'
+
   resources :concerts, only: [:index]
 
   root to: 'home#show'
