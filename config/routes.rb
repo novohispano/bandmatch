@@ -3,7 +3,12 @@ Bandmatch::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
-  resources :plans
+  resources :plans do
+    member do
+      put 'join'
+    end
+  end
+
   match 'user_plans', to: 'plans#user_plans'
   match 'near_plans', to: 'plans#near_plans'
 

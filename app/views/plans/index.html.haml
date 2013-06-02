@@ -4,3 +4,5 @@
     %h2.title-feed= plan.display_name
     %h4= "Plan: #{plan.description}"
     %h5= plan.location_in_words
+    - unless current_user.plans.include?(plan)
+      = link_to "Join Plan", join_plan_path(plan.id), method: "PUT", class: "btn btn-warning"

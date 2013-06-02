@@ -17,6 +17,16 @@ class PlansController < ApplicationController
     render :index
   end
 
+  def join
+    plan = Plan.find(params[:id])
+
+    unless plan.users.include?(current_user)
+      current_user.plans << plan
+    end
+
+    redirect_to user_plans_path, notice: "You have joined a plan."
+  end
+
   def create
     plan = current_user.plans.create(
       start:        DateTime.parse(params[:start]),
