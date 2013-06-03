@@ -1,15 +1,17 @@
 require 'spec_helper'
 
-# Specs in this file have access to a helper object that includes
-# the ConcertsHelper. For example:
-#
-# describe ConcertsHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       helper.concat_strings("this","that").should == "this that"
-#     end
-#   end
-# end
 describe ConcertsHelper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "artists_from" do
+
+    def performance(display_name)
+      OpenStruct.new(artist: OpenStruct.new(display_name: display_name))
+    end
+
+    it "gets the artists from a performance" do
+      performances = [ performance("Juana"), performance("Pedro") ]
+
+      result = artists_from(performances)
+      expect(result).to eq "Juana, Pedro"
+    end
+  end
 end

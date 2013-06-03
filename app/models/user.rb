@@ -14,7 +14,19 @@ class User < ActiveRecord::Base
   has_many :plans, through: :user_plans
 
   def self.from_omniauth(auth)
-    User.where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
+    user = find_with_auth(auth)
+    user ? user : create_with_auth(auth)
+  end
+
+  def self.find_with_auth(auth)
+    User.where(
+      provider: auth.provider,
+      uid:      auth.uid
+      ).first
+  end
+
+  def self.create_with_auth(auth)
+    User.new do |user|
       user.name             = auth.info.name
       user.email            = auth.info.email
       user.image            = auth.info.image

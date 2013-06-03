@@ -1,11 +1,7 @@
 module ConcertsHelper
   def artists_from(performances)
-    artists = ""
-
-    performances.each do |performance|
-      artists << "#{performance.artist.display_name}, "
-    end
-
-    artists.chop.chop
+    performances.collect do |performance|
+      performance.artist.display_name
+    end.join(", ")
   end
 end

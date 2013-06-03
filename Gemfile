@@ -12,6 +12,8 @@ gem "geocoder"
 
 group :test do
   gem 'simplecov'
+  gem 'webmock'
+  gem 'vcr'
   gem 'rspec-rails', "~> 2.0"
 end
 

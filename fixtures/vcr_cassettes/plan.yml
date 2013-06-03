@@ -1,0 +1,955 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?language=en&latlng=39.74,-104.98&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 03 Jun 2013 20:03:52 GMT
+      Expires:
+      - Tue, 04 Jun 2013 20:03:52 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - '*'
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "550-598",
+                       "short_name" : "550-598",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "East Colfax Avenue",
+                       "short_name" : "U.S. 287",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Capitol Hill",
+                       "short_name" : "Capitol Hill",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80203",
+                       "short_name" : "80203",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "550-598 East Colfax Avenue, Denver, CO 80203, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.74002160,
+                          "lng" : -104.97991140
+                       },
+                       "southwest" : {
+                          "lat" : 39.74001990,
+                          "lng" : -104.98048130
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.74000720,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74136973029150,
+                          "lng" : -104.9788473697085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73867176970850,
+                          "lng" : -104.9815453302915
+                       }
+                    }
+                 },
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80261",
+                       "short_name" : "80261",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80261, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80244",
+                       "short_name" : "80244",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80244, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80291",
+                       "short_name" : "80291",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80291, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80252",
+                       "short_name" : "80252",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80252, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80251",
+                       "short_name" : "80251",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80251, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80259",
+                       "short_name" : "80259",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80259, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80281",
+                       "short_name" : "80281",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80281, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80273",
+                       "short_name" : "80273",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80273, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80256",
+                       "short_name" : "80256",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Southeast Denver",
+                       "short_name" : "Southeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80256, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.73999999999999,
+                       "lng" : -104.980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74134898029150,
+                          "lng" : -104.9786510197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73865101970850,
+                          "lng" : -104.9813489802915
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Colfax Ave & Pennsylvania St",
+                       "short_name" : "Colfax Ave & Pennsylvania St",
+                       "types" : [ "bus_station", "transit_station", "establishment" ]
+                    },
+                    {
+                       "long_name" : "Northeast Denver",
+                       "short_name" : "Northeast Denver",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "80203",
+                       "short_name" : "80203",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Colfax Ave & Pennsylvania St, Denver, CO 80203, USA",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 39.7400960,
+                       "lng" : -104.9808680
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74144498029150,
+                          "lng" : -104.9795190197085
+                       },
+                       "southwest" : {
+                          "lat" : 39.73874701970850,
+                          "lng" : -104.9822169802915
+                       }
+                    }
+                 },
+                 "types" : [ "bus_station", "transit_station", "establishment" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Capitol Hill",
+                       "short_name" : "Capitol Hill",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Capitol Hill, Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.74006650,
+                          "lng" : -104.97293610
+                       },
+                       "southwest" : {
+                          "lat" : 39.72728610,
+                          "lng" : -104.9874060
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.73411430,
+                       "lng" : -104.97977530
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.74006650,
+                          "lng" : -104.97293610
+                       },
+                       "southwest" : {
+                          "lat" : 39.72728610,
+                          "lng" : -104.9874060
+                       }
+                    }
+                 },
+                 "types" : [ "neighborhood", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "80203",
+                       "short_name" : "80203",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO 80203, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.7475960,
+                          "lng" : -104.97753010
+                       },
+                       "southwest" : {
+                          "lat" : 39.7165150,
+                          "lng" : -104.98917790
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.73120950,
+                       "lng" : -104.98269650
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.7475960,
+                          "lng" : -104.97753010
+                       },
+                       "southwest" : {
+                          "lat" : 39.7165150,
+                          "lng" : -104.98917790
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.60029590
+                       },
+                       "southwest" : {
+                          "lat" : 39.6144310,
+                          "lng" : -105.1099270
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.76161889999999,
+                       "lng" : -104.96224980
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.60029590
+                       },
+                       "southwest" : {
+                          "lat" : 39.6144310,
+                          "lng" : -105.1099270
+                       }
+                    }
+                 },
+                 "types" : [ "administrative_area_level_2", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Denver",
+                       "short_name" : "Denver",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Denver, CO, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.60029590
+                       },
+                       "southwest" : {
+                          "lat" : 39.6144310,
+                          "lng" : -105.1099270
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.7375670,
+                       "lng" : -104.98471790
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 39.91424689999999,
+                          "lng" : -104.60029590
+                       },
+                       "southwest" : {
+                          "lat" : 39.6144310,
+                          "lng" : -105.1099270
+                       }
+                    }
+                 },
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Colorado",
+                       "short_name" : "CO",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Colorado, USA",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 41.00344390,
+                          "lng" : -102.0408780
+                       },
+                       "southwest" : {
+                          "lat" : 36.9924240,
+                          "lng" : -109.0602560
+                       }
+                    },
+                    "location" : {
+                       "lat" : 39.55005070,
+                       "lng" : -105.78206740
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 41.00344390,
+                          "lng" : -102.0408780
+                       },
+                       "southwest" : {
+                          "lat" : 36.9924240,
+                          "lng" : -109.0602560
+                       }
+                    }
+                 },
+                 "types" : [ "administrative_area_level_1", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.3898880,
+                          "lng" : -66.94976079999999
+                       },
+                       "southwest" : {
+                          "lat" : 18.91106420,
+                          "lng" : 172.45469660
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.090240,
+                       "lng" : -95.7128910
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 49.380,
+                          "lng" : -66.940
+                       },
+                       "southwest" : {
+                          "lat" : 25.820,
+                          "lng" : -124.390
+                       }
+                    }
+                 },
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Mon, 03 Jun 2013 20:03:52 GMT
+recorded_with: VCR 2.5.0
