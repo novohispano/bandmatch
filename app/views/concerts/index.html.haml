@@ -11,13 +11,13 @@
     / Modal
     .modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1", :id => "myModal#{index}"}
       .modal-body
-      = form_tag plans_path do
-        %h3 You are about to make a plan for the following concert.
-        = label_tag concert.display_name
-        = hidden_field_tag :start,        concert.start
-        = hidden_field_tag :display_name, concert.display_name
-        = label_tag "What's your plan for this concert?"
-        = text_field_tag :description
-        = submit_tag "Make a Plan", class: "btn btn-warning"
+        = form_tag plans_path do
+          %h4.modal-title You are about to make a plan for the following concert.
+          %h3.modal-concert= concert.display_name
+          = hidden_field_tag :start, concert.start
+          = hidden_field_tag :display_name, concert.display_name
+          = label_tag "What's your plan for this concert?"
+          = text_area_tag :description
+          = submit_tag "Make a Plan", class: "btn btn-warning pull-right"
 :javascript
 $('#myModal').modal(options)

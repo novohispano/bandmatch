@@ -92,6 +92,26 @@ a.nav {
   margin-bottom: -20px;
 }
 
+// MODAL
+
+.modal-title {
+  line-height: 1.15em;
+}
+
+.modal-concert {
+  line-height: 1.15em;
+  color: orange;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+textarea, .uneditable-input {
+  color: orange;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 515px;
+}
+
 // ALERTS
 
 .alert {
