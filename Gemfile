@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 gem 'pg'
-gem 'rspec-rails'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'omniauth-facebook'
@@ -13,6 +12,7 @@ gem "geocoder"
 
 group :test do
   gem 'simplecov'
+  gem 'rspec-rails', "~> 2.0"
 end
 
 group :development do

@@ -182,7 +182,7 @@ DEPENDENCIES
   pg
   rack-mini-profiler
   rails (= 3.2.13)
-  rspec-rails
+  rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
   simplecov
   songkickr
