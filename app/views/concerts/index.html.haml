@@ -2,7 +2,7 @@
   %h4= "Concerts near #{current_user.location}"
 - @concerts.each_with_index do |concert, index|
   .container.container-feed
-    %h4= concert.start
+    %h4= formatted_time(concert.start)
     %h2.title-feed= concert.display_name
     %h4= concert.performances.collect { |performance| performance.artist.display_name }
     %h5= concert.venue.display_name
