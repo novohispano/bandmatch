@@ -4,7 +4,7 @@
   .container.container-feed
     %h4= formatted_time(concert.start)
     %h2.title-feed= concert.display_name
-    %h4= concert.performances.collect { |performance| performance.artist.display_name }
+    %h4= artists_from(concert.performances)
     %h5= concert.venue.display_name
     / Button to trigger modal
     %a.btn.btn-warning{"data-toggle" => "modal", :href => "#myModal#{index}", :role => "button"} Make a Plan
