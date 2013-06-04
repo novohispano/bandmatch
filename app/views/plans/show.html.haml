@@ -4,7 +4,7 @@
   = image_tag "http://maps.google.com/maps/api/staticmap?size=1024x300&sensor=false&zoom=16&markers=#{@plan.venue_latitude}%2C#{@plan.venue_longitude}"
   %h5.header Location
   %h4.content= @plan.address
-  %h5.header Description
+  %h5.header Plan Description
   %h4.content= @plan.description
   .container.friends-plan-feed
     %h4.plan Attendees

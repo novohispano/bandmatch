@@ -7,9 +7,10 @@ gem 'bootstrap-sass'
 gem 'omniauth-facebook'
 gem 'songkickr'
 gem 'httparty'
-gem "koala"
-gem "geocoder"
+gem 'koala'
+gem 'geocoder'
 gem 'dalli'
+gem 'figaro'
 
 group :test do
   gem 'simplecov'
