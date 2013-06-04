@@ -11,6 +11,7 @@ gem 'koala'
 gem 'geocoder'
 gem 'dalli'
 gem 'figaro'
+gem 'thin'
 
 group :test do
   gem 'simplecov'
