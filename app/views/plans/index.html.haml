@@ -1,3 +1,5 @@
+.container.location-feed
+  %h4= path
 -if @plans.count != 0
   - @plans.each do |plan|
     .container.container-feed
@@ -5,6 +7,9 @@
       %h2.title-feed= plan.display_name
       %h4= "Plan: #{plan.description}"
       %h5= plan.location_in_words
+      .container.friends-feed
+        - plan.users.each do |user|
+          = image_tag user.image, alt: user.name, class: "img-polaroid"
       - unless current_user.plans.include?(plan)
         = link_to "Join Plan", join_plan_path(plan.id), method: "PUT", class: "btn btn-warning"
 - else

@@ -4,6 +4,8 @@ class Plan < ActiveRecord::Base
                   :location,
                   :start
 
+  default_scope order('start DESC')
+
   validates :description, presence: true
 
   has_many :user_plans
