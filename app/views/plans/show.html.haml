@@ -1,0 +1,18 @@
+.container
+  %h4= formatted_time(@plan.start)
+  %h2.title-plan= @plan.display_name
+  = image_tag "http://maps.google.com/maps/api/staticmap?size=1024x300&sensor=false&zoom=16&markers=#{@plan.venue_latitude}%2C#{@plan.venue_longitude}"
+  %h5.header Location
+  %h4.content= @plan.address
+  %h5.header Description
+  %h4.content= @plan.description
+  .container.friends-plan-feed
+    %h4.plan Attendees
+    - @plan.users.each do |user|
+      = image_tag user.image, alt: user.name, class: "img-polaroid"
+      .container.friend-details
+        %h5.name= user.name
+        %h5.location= user.location
+        %p.plans= "#{user.plans.count} plans in BandMatch"
+    - unless @current_user_plans.include?(@plan)
+      = link_to "Join Plan", join_plan_path(@plan.id), method: "PUT", class: "btn btn-warning plan"

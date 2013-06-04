@@ -4,7 +4,7 @@
   - @plans.each do |plan|
     .container.container-feed
       %h4= formatted_time(plan.start)
-      %h2.title-feed= plan.display_name
+      %h2.title-feed.link= link_to plan.display_name, plan_path(plan.id)
       %h4= "Plan: #{plan.description}"
       %h5= plan.location_in_words
       .container.friends-feed

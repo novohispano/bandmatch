@@ -6,6 +6,11 @@ class PlansController < ApplicationController
     current_user_plans
   end
 
+  def show
+    @plan  = Plan.find(params[:id])
+    current_user_plans
+  end
+
   def user_plans
     @plans = current_user.plans.recent.includes(:users)
     current_user_plans
@@ -46,7 +51,7 @@ class PlansController < ApplicationController
       flash[:notice] = 'Your plan was successfully created.'
       redirect_to user_plans_path
     else
-      flash[:alert] = 'There was an error creating your plan. Did you forget mentioning your plan?'
+      flash[:alert]  = 'There was an error creating your plan. Did you forget mentioning your plan?'
       redirect_to concerts_path
     end
   end

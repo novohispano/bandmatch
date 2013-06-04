@@ -141,3 +141,67 @@ textarea, .uneditable-input {
   border-color: #eed3d7;
   color: #b94a48;
 }
+
+// PLAN
+
+.header {
+  color: orange;
+  margin-bottom: -10px;
+  margin-top: 20px;
+}
+
+.content {
+  margin-bottom: 10px;
+}
+
+.container.friends-plan-feed {
+  margin-left: 660px;
+  margin-top: -430px;
+}
+
+.container.friend-details {
+  margin-left: 70px;
+  margin-top: -85px;
+}
+
+h5.name {
+  margin-bottom: -10px;
+}
+
+h5.location {
+  margin-bottom: -10px;
+  color: orange;
+}
+
+p.plans {
+  font-size: .8em;
+  margin-top: 8px;
+}
+
+h4.plan {
+  margin-top: -2px;
+}
+
+.title-plan {
+  color: orange;
+  letter-spacing: -.04em;
+  margin-bottom: 18px;
+}
+
+.plan {
+  width: 100px;
+}
+
+// LINKS
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+/* line 27, ../../../../../.rvm/gems/ruby-2.0.0-p195/gems/bootstrap-sass-2.3.1.2/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
+a:hover,
+a:focus {
+  color: gray;
+  text-decoration: underline;
+}

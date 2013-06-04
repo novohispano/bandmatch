@@ -19,4 +19,8 @@ class Plan < ActiveRecord::Base
   def location_in_words
     GeocoderService.coordinates_to_location(self.location)
   end
+
+  def address
+    GeocoderService.coordinates_to_address(self.location)
+  end
 end
