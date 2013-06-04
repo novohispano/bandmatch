@@ -2,17 +2,17 @@ class PlansController < ApplicationController
   before_filter :require_login
 
   def index
-    @plans = Plan.all.recent
+    @plans = Plan.recent.includes(:users)
   end
 
   def user_plans
-    @plans = current_user.plans.recent
+    @plans = current_user.plans.recent.includes(:users)
 
     render :index
   end
 
   def near_plans
-    @plans = Plan.where(location: current_user.coordinates).recent
+    @plans = Plan.where(location: current_user.coordinates).recent.includes(:users)
 
     render :index
   end
