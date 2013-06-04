@@ -5,6 +5,7 @@ class Plan < ActiveRecord::Base
                   :start
 
   default_scope order('start DESC')
+  scope :recent, lambda { where('start >= ?', Time.now - 1.day) }
 
   validates :description, presence: true
 
