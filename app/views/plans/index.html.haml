@@ -10,7 +10,7 @@
       .container.friends-feed
         - plan.users.each do |user|
           = image_tag user.image, alt: user.name, class: "img-polaroid"
-      - unless current_user.plans.include?(plan)
+      - unless @current_user_plans.include?(plan)
         = link_to "Join Plan", join_plan_path(plan.id), method: "PUT", class: "btn btn-warning"
 - else
   .container.location-feed

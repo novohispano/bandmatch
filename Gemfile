@@ -9,6 +9,7 @@ gem 'songkickr'
 gem 'httparty'
 gem "koala"
 gem "geocoder"
+gem 'dalli'
 
 group :test do
   gem 'simplecov'

@@ -2,17 +2,20 @@ class PlansController < ApplicationController
   before_filter :require_login
 
   def index
-    @plans = Plan.recent.includes(:users)
+    @plans = all_plans
+    current_user_plans
   end
 
   def user_plans
     @plans = current_user.plans.recent.includes(:users)
+    current_user_plans
 
     render :index
   end
 
   def near_plans
-    @plans = Plan.where(location: current_user.coordinates).recent.includes(:users)
+    @plans = all_plans.where(location: current_user.coordinates)
+    current_user_plans
 
     render :index
   end
@@ -42,5 +45,17 @@ class PlansController < ApplicationController
       flash[:notice] = 'There was an error creating your plan. Did you forget mentioning your plan?'
       redirect_to concerts_path
     end
+  end
+
+  private
+
+  def all_plans
+    Rails.cache.fetch("plans", expires_in: 5.minutes) do
+      Plan.recent.includes(:users)
+    end
+  end
+
+  def current_user_plans
+    @current_user_plans = current_user.plans.to_a
   end
 end
