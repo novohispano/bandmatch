@@ -88,6 +88,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    memcachier (0.0.2)
     mime-types (1.23)
     multi_json (1.7.4)
     multi_xml (0.5.3)
@@ -195,6 +196,7 @@ DEPENDENCIES
   httparty
   jquery-rails
   koala
+  memcachier
   omniauth-facebook
   pg
   rack-mini-profiler
