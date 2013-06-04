@@ -3,7 +3,7 @@ module ApplicationHelper
     input.strftime("%B %d, %Y - %l:%M %p")
   end
 
-  def path
+  def message_path
     path = response.request.fullpath
     case path
     when "/plans"

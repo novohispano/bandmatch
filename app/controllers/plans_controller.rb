@@ -32,17 +32,21 @@ class PlansController < ApplicationController
 
   def create
     plan = current_user.plans.create(
-      start:        DateTime.parse(params[:start]),
-      display_name: params[:display_name],
-      description:  params[:description],
-      location:     current_user.coordinates
+      artists:         params[:artists],
+      description:     params[:description],
+      display_name:    params[:display_name],
+      location:        current_user.coordinates,
+      start:           DateTime.parse(params[:start]),
+      venue_name:      params[:venue_name],
+      venue_latitude:  params[:venue_latitude],
+      venue_longitude: params[:venue_longitude]
       )
 
     if plan.save
       flash[:notice] = 'Your plan was successfully created.'
       redirect_to user_plans_path
     else
-      flash[:notice] = 'There was an error creating your plan. Did you forget mentioning your plan?'
+      flash[:alert] = 'There was an error creating your plan. Did you forget mentioning your plan?'
       redirect_to concerts_path
     end
   end

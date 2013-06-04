@@ -3,7 +3,6 @@ class ConcertsController < ApplicationController
 
   def index
     @concerts = concerts_for_current_user
-    expires_in 12.hours, public: true
   end
 
   private

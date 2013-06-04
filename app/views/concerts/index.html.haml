@@ -3,19 +3,23 @@
 - @concerts.each_with_index do |concert, index|
   .container.container-feed
     %h4= formatted_time(concert.start)
-    %h2.title-feed= concert.display_name
+    %h2.title-feed= title_for(concert)
     %h4= artists_from(concert.performances)
     %h5= concert.venue.display_name
     / Button to trigger modal
-    %a.btn.btn-warning{"data-toggle" => "modal", :href => "#myModal#{index}", :role => "button"} Make a Plan
+    %a.btn.btn-warning.pull-right{"data-toggle" => "modal", :href => "#myModal#{index}", :role => "button"} Make a Plan
     / Modal
     .modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1", :id => "myModal#{index}"}
       .modal-body
         = form_tag plans_path do
           %h4.modal-title You are about to make a plan for the following concert.
-          %h3.modal-concert= concert.display_name
+          %h3.modal-concert= title_for(concert)
           = hidden_field_tag :start, concert.start
-          = hidden_field_tag :display_name, concert.display_name
+          = hidden_field_tag :artists, artists_from(concert.performances)
+          = hidden_field_tag :display_name, title_for(concert)
+          = hidden_field_tag :venue_name, concert.venue.display_name
+          = hidden_field_tag :venue_latitude, concert.venue.lat
+          = hidden_field_tag :venue_longitude, concert.venue.lng
           = label_tag "What's your plan for this concert?"
           = text_area_tag :description
           = submit_tag "Make a Plan", class: "btn btn-warning pull-right"

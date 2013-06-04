@@ -27,4 +27,6 @@
                 = link_to "Sign in with Facebook", "/auth/facebook", class: "nav"
     - if flash.notice
       .alert= flash.notice
+    - elsif flash.alert
+      .alert.alert-error= flash.alert
     = yield

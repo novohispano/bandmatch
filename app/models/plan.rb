@@ -1,8 +1,12 @@
 class Plan < ActiveRecord::Base
-  attr_accessible :display_name,
+  attr_accessible :artists,
                   :description,
+                  :display_name,
                   :location,
-                  :start
+                  :start,
+                  :venue_name,
+                  :venue_latitude,
+                  :venue_longitude
 
   default_scope order('start DESC')
   scope :recent, lambda { where('start >= ?', Time.now - 1.day) }

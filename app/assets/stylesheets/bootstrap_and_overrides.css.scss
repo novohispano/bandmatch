@@ -78,8 +78,12 @@ a.nav {
 // FEED
 
 .container.container-feed {
+  border: 1px solid #D3D3D3;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
   margin-top: 30px;
   margin-bottom: 30px;
+  padding: 20px;
 }
 
 .title-feed {
@@ -130,4 +134,10 @@ textarea, .uneditable-input {
   border: 1px solid #fbeed5;
   border-radius: 0px;
   margin-top: -20px;
+}
+
+.alert-danger, .alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
 }
