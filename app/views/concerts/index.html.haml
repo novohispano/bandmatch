@@ -20,6 +20,7 @@
           = hidden_field_tag :venue_name, concert.venue.display_name
           = hidden_field_tag :venue_latitude, concert.venue.lat
           = hidden_field_tag :venue_longitude, concert.venue.lng
+          = hidden_field_tag :tickets_url, concert.uri
           = label_tag "What's your plan for this concert?"
           = text_area_tag :description
           = submit_tag "Make a Plan", class: "btn btn-warning pull-right"

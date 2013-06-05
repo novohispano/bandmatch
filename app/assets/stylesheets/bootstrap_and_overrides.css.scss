@@ -154,12 +154,12 @@ textarea, .uneditable-input {
   margin-bottom: 10px;
 }
 
-.container.friends-plan-feed {
+.friends-plan-feed {
   margin-left: 660px;
   margin-top: -430px;
 }
 
-.container.friend-details {
+.friend-details {
   margin-left: 70px;
   margin-top: -85px;
 }
@@ -189,7 +189,7 @@ h4.plan {
 }
 
 .plan {
-  width: 100px;
+  margin-bottom: 10px;
 }
 
 // LINKS
@@ -199,9 +199,9 @@ a {
   text-decoration: none;
 }
 
-/* line 27, ../../../../../.rvm/gems/ruby-2.0.0-p195/gems/bootstrap-sass-2.3.1.2/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:hover,
 a:focus {
-  color: gray;
+  color: black;
+  opacity: 0.6;
   text-decoration: underline;
 }

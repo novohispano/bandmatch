@@ -42,6 +42,7 @@ class PlansController < ApplicationController
       display_name:    params[:display_name],
       location:        current_user.coordinates,
       start:           DateTime.parse(params[:start]),
+      tickets_url:     params[:tickets_url],
       venue_name:      params[:venue_name],
       venue_latitude:  params[:venue_latitude],
       venue_longitude: params[:venue_longitude]

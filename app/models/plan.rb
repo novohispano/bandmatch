@@ -4,6 +4,7 @@ class Plan < ActiveRecord::Base
                   :display_name,
                   :location,
                   :start,
+                  :tickets_url,
                   :venue_name,
                   :venue_latitude,
                   :venue_longitude
@@ -21,6 +22,10 @@ class Plan < ActiveRecord::Base
   end
 
   def address
-    GeocoderService.coordinates_to_address(self.location)
+    GeocoderService.coordinates_to_address(self.coordinates)
+  end
+
+  def coordinates
+    "#{self.venue_latitude},#{self.venue_longitude}"
   end
 end
