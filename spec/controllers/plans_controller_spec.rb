@@ -1,28 +1,41 @@
 require 'spec_helper'
 
 describe PlansController do
-  # describe '#index' do
-  #   it 'index works' do
-  #     get :index
-  #     expect(response).to be_success
-  #     expect(assigns[:plans]).to eq(plans)
-  #   end
-  # end
+  let(:user) do
+    create_user
+  end
+
+  before do
+    GeocoderService.stub!(location_to_coordinates: '')
+  end
+
+
+  describe '#index' do
+    it 'shows all actions' do
+      plan = create_plan
+      get :index, {}, user_id: user.id
+      result = assigns(:plans).first
+      expect(response.status).to eq 200
+      expect(result).to eq(plan)
+    end
+  end
+
+  describe '#show' do
+    it 'shows all actions' do
+      plan = create_plan
+      get :show, { id: plan.id }, user_id: user.id
+      result = assigns(:plan)
+      expect(response.status).to eq 200
+      expect(result).to eq(plan)
+    end
+  end
 
   describe '#create' do
-    let(:user) do
-      create_user
-    end
-
-    before do
-      GeocoderService.stub!(:location_to_coordinates => '')
-    end
-
     def create_action(params)
-      post :create, params, :user_id => user.id
+      post :create, params, user_id: user.id
     end
 
-    it 'creating fails because of invalid parameters' do
+    it 'doesn\'t creates a plan because of invalid params' do
       expect {
         create_action({})
       }.not_to change(Plan, :count)
@@ -31,12 +44,13 @@ describe PlansController do
       expect(flash[:alert]).to eq('There was an error creating your plan. Did you forget mentioning your plan?')
     end
 
-    it 'successful create' do
+    it 'creates a plan when given correct params' do
       expect {
         create_action(:description => 'test')
       }.to change(Plan, :count).by(1)
 
-      # TODO: assert flash message, redirect
+      expect(response).to redirect_to(user_plans_path)
+      expect(flash[:notice]).to eq('Your plan was successfully created.')
     end
   end
 end

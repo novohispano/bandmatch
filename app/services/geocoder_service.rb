@@ -15,7 +15,7 @@ class GeocoderService
   end
 
   def self.lat_long(result)
-    "#{result.latitude.round(2)},#{result.longitude.round(2)}"
+    "#{result.latitude},#{result.longitude}"
   end
 
   def self.city_state(result)
