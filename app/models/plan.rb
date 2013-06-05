@@ -17,6 +17,11 @@ class Plan < ActiveRecord::Base
   has_many :user_plans
   has_many :users, through: :user_plans
 
+  def self.create_for_user(user, params)
+    params_with_location = params.merge(:location => user.coordinates)
+    user.plans.create(params_with_location)
+  end
+
   def location_in_words
     GeocoderService.coordinates_to_location(self.location)
   end

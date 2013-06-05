@@ -36,17 +36,7 @@ class PlansController < ApplicationController
   end
 
   def create
-    plan = current_user.plans.create(
-      artists:         params[:artists],
-      description:     params[:description],
-      display_name:    params[:display_name],
-      location:        current_user.coordinates,
-      start:           DateTime.parse(params[:start]),
-      tickets_url:     params[:tickets_url],
-      venue_name:      params[:venue_name],
-      venue_latitude:  params[:venue_latitude],
-      venue_longitude: params[:venue_longitude]
-      )
+    plan = Plan.create_for_user(current_user, params.except(:controller, :action))
 
     if plan.save
       flash[:notice] = 'Your plan was successfully created.'

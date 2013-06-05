@@ -18,4 +18,14 @@ describe Plan do
       end
     end
   end
+
+  describe 'a new plan inherits location from its owner' do
+    it 'copies user coordinates to location' do
+      user = create_user
+      user.stub!(:coordinates => '1,2')
+      plan = Plan.create_for_user(user, :description => 'test')
+      expect(plan.location).to eq(user.coordinates)
+      expect(plan.users.first).to eq(user)
+    end
+  end
 end
