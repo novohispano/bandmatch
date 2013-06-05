@@ -5,7 +5,7 @@ describe GeocoderService do
     it "transforms a location into coordinates" do
       VCR.use_cassette('location_to_coordinates') do
         result = GeocoderService.location_to_coordinates("Denver, Colorado")
-        expect(result).to eq "39.74,-104.98"
+        expect(result).to eq "39.737567,-104.9847179"
       end
     end
   end

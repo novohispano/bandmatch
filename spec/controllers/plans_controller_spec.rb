@@ -9,7 +9,6 @@ describe PlansController do
     GeocoderService.stub!(location_to_coordinates: '')
   end
 
-
   describe '#index' do
     it 'shows all actions' do
       plan = create_plan

@@ -68,11 +68,13 @@
   margin-left: -20px;
   padding: 10px 20px 10px;
   text-shadow: none;
+  text-decoration: none;
 }
 
 a.nav {
   color: white;
   padding-top: 12px;
+  text-decoration: none;
 }
 
 // FEED
@@ -122,6 +124,10 @@ textarea, .uneditable-input {
   margin-bottom: 20px;
   margin-top: 10px;
   width: 515px;
+}
+
+.btn.cancel {
+  margin-right: 10px;
 }
 
 // ALERTS
@@ -204,5 +210,10 @@ a:hover,
 a:focus {
   color: black;
   opacity: 0.6;
+  text-decoration: underline;
+}
+
+a.not-found-link {
+  color: gray;
   text-decoration: underline;
 }

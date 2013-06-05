@@ -36,7 +36,7 @@ class PlansController < ApplicationController
   end
 
   def create
-    plan = Plan.create_for_user(current_user, params.except(:controller, :action))
+    plan = Plan.create_for_user(current_user, params_processor(params))
 
     if plan.save
       flash[:notice] = 'Your plan was successfully created.'
@@ -57,5 +57,13 @@ class PlansController < ApplicationController
 
   def current_user_plans
     @current_user_plans = current_user.plans.to_a
+  end
+
+  def params_processor(params)
+    params.except(:controller,
+                  :action,
+                  :utf8,
+                  :authenticity_token,
+                  :commit)
   end
 end

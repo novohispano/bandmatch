@@ -14,4 +14,4 @@
         = link_to "Join Plan", join_plan_path(plan.id), method: "PUT", class: "btn btn-warning pull-right"
 - else
   .container.location-feed
-    %h4 There are no plans yet. Start one by clicking #{link_to "here", concerts_path}.
+    %h4 There are no plans yet. Start one by clicking #{link_to "here", concerts_path, class:"not-found-link"}.

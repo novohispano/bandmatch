@@ -34,7 +34,7 @@ describe User do
     it 'returns the coordinates for a user location' do
       VCR.use_cassette('user') do
         result = user.coordinates
-        expect(result).to eq '40.71,-74.01'
+        expect(result).to eq "40.7143528,-74.00597309999999"
       end
     end
   end
