@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   has_many :user_plans
   has_many :plans, through: :user_plans
 
+  has_many :comments
+
   def self.from_omniauth(auth)
     user = find_with_auth(auth)
     user ? user : create_with_auth(auth)

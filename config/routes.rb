@@ -9,6 +9,8 @@ Bandmatch::Application.routes.draw do
     end
   end
 
+  resources :comments, only:[:create]
+
   match 'user_plans', to: 'plans#user_plans'
   match 'near_plans', to: 'plans#near_plans'
 
