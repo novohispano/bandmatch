@@ -4,11 +4,6 @@ class GeocoderService
     lat_long(result)
   end
 
-  def self.coordinates_to_location(coordinates)
-    result = search_by(coordinates)
-    city_state(result)
-  end
-
   def self.query_to_location(query)
     result = search_by(query)
     result ? city_state(result) : "Unknown location."
