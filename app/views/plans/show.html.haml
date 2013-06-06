@@ -3,9 +3,10 @@
     .span8
       %h4= formatted_time(@plan.start)
       %h2.title-plan= @plan.display_name
-      = image_tag "http://maps.google.com/maps/api/staticmap?size=1024x300&sensor=false&zoom=16&markers=#{@plan.venue_latitude}%2C#{@plan.venue_longitude}"
-      %h5.header Location
-      %h4.content= @plan.address
+      - unless plan.venue_name == "Unknown venue"
+        = image_tag "http://maps.google.com/maps/api/staticmap?size=1024x300&sensor=false&zoom=16&markers=#{@plan.venue_latitude}%2C#{@plan.venue_longitude}"
+        %h5.header Location
+        %h4.content= @plan.address
       %h5.header Plan Description
       %h4.content= @plan.description
       .comments-form
