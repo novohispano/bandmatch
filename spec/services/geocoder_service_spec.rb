@@ -12,8 +12,8 @@ describe GeocoderService do
 
   describe 'coordinates_to_location' do
     it "transforms a location into coordinates" do
-      VCR.use_cassette('coordinates_to_location') do
-        result = GeocoderService.coordinates_to_location("39.74,-104.98")
+      VCR.use_cassette('query_to_location') do
+        result = GeocoderService.query_to_location("39.74,-104.98")
         expect(result).to eq "Denver, Colorado"
       end
     end

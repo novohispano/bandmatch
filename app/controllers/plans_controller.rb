@@ -34,7 +34,7 @@ class PlansController < ApplicationController
       current_user.plans << plan
     end
 
-    redirect_to user_plans_path, notice: "You have joined a plan."
+    redirect_to plan_path(plan.id), notice: "You have joined this plan."
   end
 
   def create
