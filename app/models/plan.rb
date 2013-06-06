@@ -25,7 +25,7 @@ class Plan < ActiveRecord::Base
   end
 
   def location_in_words
-    GeocoderService.coordinates_to_location(self.location)
+    GeocoderService.query_to_location(self.location)
   end
 
   def address
