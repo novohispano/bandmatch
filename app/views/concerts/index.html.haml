@@ -28,4 +28,4 @@
             %button.btn.cancel.pull-right{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancel
 - else
   .container.location-feed
-    %h4 We couldn't find any concerts in #{current_user.location}. Try to check other available plans in BandMatch #{link_to "here", plans_path}.
+    %h4 We couldn't find any concerts in #{current_user.location}. Try to check other available plans in BandMatch #{link_to "here", plans_path, class:"not-found-link}.
