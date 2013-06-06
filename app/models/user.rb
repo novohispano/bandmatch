@@ -13,9 +13,9 @@ class User < ActiveRecord::Base
 
   has_many :comments
 
-  def self.from_omniauth(auth)
+  def self.from_omniauth(auth, ip = "")
     user = find_with_auth(auth)
-    user ? user : create_with_auth(auth)
+    user ? user : create_with_auth(auth, ip)
   end
 
   def self.find_with_auth(auth)
@@ -25,12 +25,12 @@ class User < ActiveRecord::Base
       ).first
   end
 
-  def self.create_with_auth(auth)
+  def self.create_with_auth(auth, ip = "")
     User.new do |user|
       user.name             = auth.info.name
       user.email            = auth.info.email
       user.image            = auth.info.image
-      user.location         = auth.info.location || ip_to_location(request.ip)
+      user.location         = auth.info.location || ip_to_location(ip)
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.oauth_token      = auth.credentials.token
       user.provider         = auth.provider

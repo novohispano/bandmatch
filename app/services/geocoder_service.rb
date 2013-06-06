@@ -10,7 +10,7 @@ class GeocoderService
   end
 
   def self.query_to_location(query)
-    result = search_by(coordinates)
+    result = search_by(query)
     city_state(result)
   end
 
