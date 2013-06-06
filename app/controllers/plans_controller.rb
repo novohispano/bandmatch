@@ -42,7 +42,7 @@ class PlansController < ApplicationController
 
     if plan.save
       flash[:notice] = 'Your plan was successfully created.'
-      redirect_to user_plans_path
+      redirect_to plan_path(plan.id)
     else
       flash[:alert]  = 'There was an error creating your plan. Did you forget mentioning your plan?'
       redirect_to concerts_path

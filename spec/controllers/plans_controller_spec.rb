@@ -48,7 +48,7 @@ describe PlansController do
         create_action(:description => 'test')
       }.to change(Plan, :count).by(1)
 
-      expect(response).to redirect_to(user_plans_path)
+      expect(response).to redirect_to(plan_path(Plan.first.id))
       expect(flash[:notice]).to eq('Your plan was successfully created.')
     end
   end
