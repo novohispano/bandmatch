@@ -11,12 +11,12 @@ class GeocoderService
 
   def self.query_to_location(query)
     result = search_by(query)
-    city_state(result)
+    result ? city_state(result) : "Unknown location."
   end
 
   def self.coordinates_to_address(coordinates)
     result = search_by(coordinates)
-    address(result)
+    result ? address(result) : "Unknown address."
   end
 
   def self.lat_long(result)
