@@ -3,10 +3,7 @@
     .span8
       %h4= formatted_time(@plan.start)
       %h2.title-plan= @plan.display_name
-      - if @plan.address == "Unknown address."
-        %h5.header Location
-        %h4.content= @plan.venue_name
-      - else
+      - unless @plan.address == "Unknown address."
         = image_tag "http://maps.google.com/maps/api/staticmap?size=1024x300&sensor=false&zoom=16&markers=#{@plan.venue_latitude}%2C#{@plan.venue_longitude}"
         %h5.header Location
         %h4.content= @plan.address
