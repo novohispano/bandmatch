@@ -2,8 +2,6 @@ class User < ActiveRecord::Base
   attr_accessible :name,
                   :email,
                   :image,
-                  :city,
-                  :state,
                   :location,
                   :oauth_expires_at,
                   :oauth_token,
@@ -32,9 +30,7 @@ class User < ActiveRecord::Base
       user.name             = auth.info.name
       user.email            = auth.info.email
       user.image            = auth.info.image
-      user.city             = auth.info.location.split(", ")[0]
-      user.state            = auth.info.location.split(", ")[1]
-      user.location         = auth.info.location
+      user.location         = auth.info.location || ip_to_location(request.ip)
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.oauth_token      = auth.credentials.token
       user.provider         = auth.provider
@@ -49,5 +45,9 @@ class User < ActiveRecord::Base
 
   def facebook
     @facebook ||= Koala::Facebook::API.new(oauth_token)
+  end
+
+  def self.ip_to_location(ip)
+    GeocoderService.query_to_location(ip)
   end
 end

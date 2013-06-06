@@ -24,8 +24,6 @@ module ObjectCreationMethods
       oauth_expires_at: DateTime.parse("Thu, 01 Aug 2013 23:28:47 UTC +00:00"),
       email:            "jwong@test.com",
       image:            "http://graph.facebook.com/100005981503757/picture?type=square",
-      city:             "New York",
-      state:            "New York",
       location:         "New York, New York"
     }
 

@@ -9,6 +9,11 @@ class GeocoderService
     city_state(result)
   end
 
+  def self.query_to_location(query)
+    result = search_by(coordinates)
+    city_state(result)
+  end
+
   def self.coordinates_to_address(coordinates)
     result = search_by(coordinates)
     address(result)

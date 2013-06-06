@@ -54,8 +54,6 @@ describe User do
       expect(result.name).to             eq 'James Ameihaejcgeg Wongescu'
       expect(result.email).to            eq 'jwong@test.com'
       expect(result.image).to            eq 'http://graph.facebook.com/100005981503757/picture?type=square'
-      expect(result.city).to             eq 'New York'
-      expect(result.state).to            eq 'New York'
       expect(result.location).to         eq 'New York, New York'
       expect(result.oauth_expires_at).to eq '1999-12-31 22:00:00 -0700'
       expect(result.oauth_token).to      eq 'CAAIc1b7yEMoBAOwV6L5wWEvhwBHAgfq7Diu7zzTZBWNO0wjV6VxhFClEB5bURmFuhjm11dk7CBIBGQgO6YUUdvkUam4MqnWUZCh5Y1lbmGoI2JfFGz77Ox15rUwuQ9u819mPbEseT9lpClZAZAxt'
