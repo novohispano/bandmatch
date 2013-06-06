@@ -2,12 +2,14 @@ class PlansController < ApplicationController
   before_filter :require_login
 
   def index
-    @plans = all_plans
+    @plans = Plan.recent.includes(:users)
     current_user_plans
   end
 
   def show
-    @plan  = Plan.find(params[:id])
+    @plan     = Plan.find(params[:id])
+    @comments = @plan.comments.includes(:user)
+    @users    = @plan.users.reverse
     current_user_plans
   end
 
@@ -19,7 +21,7 @@ class PlansController < ApplicationController
   end
 
   def near_plans
-    @plans = all_plans.where(location: current_user.coordinates)
+    @plans = Plan.where(location: current_user.coordinates).recent.includes(:users)
     current_user_plans
 
     render :index
@@ -48,12 +50,6 @@ class PlansController < ApplicationController
   end
 
   private
-
-  def all_plans
-    Rails.cache.fetch("plans", expires_in: 5.minutes) do
-      Plan.recent.includes(:users)
-    end
-  end
 
   def current_user_plans
     @current_user_plans = current_user.plans.to_a

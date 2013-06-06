@@ -12,6 +12,6 @@ test:
 
 production:
   adapter: postgresql
-  database: bandmatch_production
+  database: production
   pool: 5
   timeout: 5000

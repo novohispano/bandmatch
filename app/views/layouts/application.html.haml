@@ -2,14 +2,14 @@
 %html
   %head
     %title Bandmatch
-    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
     .navbar.navbar-top
       .navbar-inner
         .container
-          %a.brand BandMatch.
+          = link_to "BandMatch.", root_path, class: "brand"
           .nav-collapse.collapse
             - if current_user
               %ul.nav

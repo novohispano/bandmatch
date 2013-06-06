@@ -1,0 +1,5 @@
+= image_tag user.image, alt: user.name, class: "img-polaroid"
+.friend-details
+  %h5.name= user.name
+  %h5.location= user.location
+  %p.plans #{user.plans.count} plans in BandMatch

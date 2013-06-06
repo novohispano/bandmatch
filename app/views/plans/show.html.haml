@@ -1,20 +1,25 @@
 .container
-  %h4= formatted_time(@plan.start)
-  %h2.title-plan= @plan.display_name
-  = image_tag "http://maps.google.com/maps/api/staticmap?size=1024x300&sensor=false&zoom=16&markers=#{@plan.venue_latitude}%2C#{@plan.venue_longitude}"
-  %h5.header Location
-  %h4.content= @plan.address
-  %h5.header Plan Description
-  %h4.content= @plan.description
-  .friends-plan-feed
-    - if @current_user_plans.include?(@plan)
-      = link_to "Buy Tickets", @plan.tickets_url, class: "btn btn-warning plan"
-    - else
-      = link_to "Join Plan", join_plan_path(@plan.id), method: "PUT", class: "btn btn-warning plan"
-    %h4.plan Attendees
-    - @plan.users.each do |user|
-      = image_tag user.image, alt: user.name, class: "img-polaroid"
-      .friend-details
-        %h5.name= user.name
-        %h5.location= user.location
-        %p.plans= "#{user.plans.count} plans in BandMatch"
+  .row
+    .span8
+      %h4= formatted_time(@plan.start)
+      %h2.title-plan= @plan.display_name
+      = image_tag "http://maps.google.com/maps/api/staticmap?size=1024x300&sensor=false&zoom=16&markers=#{@plan.venue_latitude}%2C#{@plan.venue_longitude}"
+      %h5.header Location
+      %h4.content= @plan.address
+      %h5.header Plan Description
+      %h4.content= @plan.description
+      .comments-form
+        %h5.header Comments
+        = form_tag comments_path do
+          .comment= text_area_tag :body, ""
+          = hidden_field_tag :plan_id, @plan.id
+          = hidden_field_tag :user_id, current_user.id
+          = submit_tag "Comment", class: "btn btn-warning pull-right"
+      = render partial: 'comment', collection: @comments
+    .span4.friends-plan-feed
+      - if @current_user_plans.include?(@plan)
+        = link_to "Buy Tickets", @plan.tickets_url, class: "btn btn-warning plan"
+      - else
+        = link_to "Join Plan", join_plan_path(@plan.id), method: "PUT", class: "btn btn-warning plan"
+      %h4.plan Attendees
+      = render partial: 'user', collection: @users

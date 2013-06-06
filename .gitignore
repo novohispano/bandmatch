@@ -13,5 +13,9 @@
 
 # Ignore SimpleCov
 /coverage
+
+# Ignore VCR fixtures
+/fixtures
+
 # Ignore application configuration
 /config/application.yml

@@ -1,0 +1,7 @@
+%hr
+.comments
+  = image_tag comment.user.image, class: "img-polaroid"
+  .friend-details
+    %h5.comment-date= formatted_time(comment.created_at)
+    %h5.comment-name= comment.user.name
+    %p.comment-body= comment.body

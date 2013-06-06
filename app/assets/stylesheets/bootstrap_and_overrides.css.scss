@@ -161,9 +161,8 @@ textarea, .uneditable-input {
   width: 650px;
 }
 
-.friends-plan-feed {
-  margin-left: 660px;
-  margin-top: -430px;
+.span4.friends-plan-feed {
+  margin-top: 108px;
 }
 
 .friend-details {
@@ -196,14 +195,41 @@ h4.plan {
 }
 
 .plan {
+  margin-top: -10px;
   margin-bottom: 10px;
+}
+
+// COMMENTS
+
+textarea#body {
+  color: orange;
+  margin-bottom: 12px;
+  margin-top: 14px;
+  width: 608px;
+}
+
+.comments-form {
+  margin-bottom: 50px;
+}
+
+.comment-date {
+  font-size: .9em;
+}
+
+.comment-name {
+  margin-top: -10px;
+  color: orange;
+}
+
+.comment-body {
+  margin-top: -10px;
 }
 
 // LINKS
 
 a {
-  color: orange;
-  text-decoration: none;
+color: orange;
+text-decoration: none;
 }
 
 a:hover,
