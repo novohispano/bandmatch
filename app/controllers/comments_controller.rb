@@ -3,10 +3,13 @@ class CommentsController < ApplicationController
 
   def create
     attributes = params_processor(params)
+    comment = Comment.create!(attributes)
 
-    Comment.create(attributes)
-
-    redirect_to plan_path(params[:plan_id]), notice: "Your comment was created."
+    if request.xhr?
+      render partial: 'plans/comment', object: comment
+    else
+      redirect_to plan_path(params[:plan_id]), notice: "Your comment was created."
+    end
   end
 
   private

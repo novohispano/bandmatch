@@ -12,14 +12,17 @@
         %h4.content= @plan.address
       %h5.header Plan Description
       %h4.content= @plan.description
+
       .comments-form
         %h5.header Comments
-        = form_tag comments_path do
+        = form_tag comments_path, remote: true do
           .comment= text_area_tag :body, ""
           = hidden_field_tag :plan_id, @plan.id
           = hidden_field_tag :user_id, current_user.id
           = submit_tag "Comment", class: "btn btn-warning pull-right"
+
       = render partial: 'comment', collection: @comments
+
     .span4.friends-plan-feed
       - if @current_user_plans.include?(@plan)
         = link_to "Buy Tickets", @plan.tickets_url, class: "btn btn-warning plan"
