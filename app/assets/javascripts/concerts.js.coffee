@@ -1,1 +1,2 @@
+options = { }
 $('#myModal').modal(options)
