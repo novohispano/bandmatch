@@ -14,4 +14,3 @@ Find a concert, make a plan, go with friends.
 * Email notifications
 * Pagination
 * Map with all concerts
-* Ajax updating
